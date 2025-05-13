@@ -1,9 +1,10 @@
 "use client"
 import { motion } from "framer-motion"
-import StarContact from "@/components/StarContact"
+import ContactSection from "@/components/ContactSection"
 import Hero from "@/components/Hero"
-import SkillsSection from "@/components/SkillsSection"
+import VolunteeringSection from "@/components/VolunteeringSection"
 import ProjectsSections from "@/components/ProjectsSection"
+import OrbitingCirclesSkills from "@/components/OrbitingCirclesSkills"
 
 export default function Home() {
   return (
@@ -22,8 +23,9 @@ export default function Home() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <SkillsSection />
+        <OrbitingCirclesSkills />
       </motion.section>
+
       <motion.section
         id="projects"
         initial={{ opacity: 0, y: 50 }}
@@ -33,14 +35,16 @@ export default function Home() {
       >
         <ProjectsSections />
       </motion.section>
-      <section className="bg-white text-darkText py-24 px-6">
-        <div className="max-w-4xl mx-auto text-center font-heading text-3xl md:text-4xl font-extrabold leading-snug">
-          <p>
-            “Great front-end is invisible. If it feels easy, fast, and beautiful
-            — I’ve done my job.”
-          </p>
-        </div>
-      </section>
+      <motion.section
+        id="volunteering"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <VolunteeringSection />
+      </motion.section>
+
       <motion.section
         id="contact"
         className="scroll-mt-20 py-24 bg-gray-100"
@@ -49,8 +53,14 @@ export default function Home() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <section className="bg-accent text-darkText py-24 px-6">
-          <StarContact />
+        <section className="bg-accent text-darkText px-10 ">
+          <div className="max-w-4xl mx-auto text-center font-heading text-3xl md:text-4xl font-extrabold leading-snug">
+            <p>
+              “Great front-end is invisible. If it feels easy, fast, and
+              beautiful — I’ve done my job.”
+            </p>
+          </div>
+          <ContactSection />
         </section>
       </motion.section>
     </main>

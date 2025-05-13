@@ -1,35 +1,37 @@
-// components/Hero.tsx
 "use client"
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { Typewriter } from "react-simple-typewriter"
 
-export default function Hero() {
+export default function HeroSection() {
   return (
-    <section className="w-full  bg-accent text-darkText pt-28 px-6">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-20 py-20">
-        {/* Intro Section */}
-        <div className="flex-1 text-center md:text-left">
-          <h1 className="text-4xl md:text-5xl font-extrabold font-heading mb-4">
-            Hi, I’m Maryam{" "}
-            <motion.span
-              className="inline-block origin-bottom"
-              animate={{ rotate: [0, 15, -10, 15, 0] }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              👋
-            </motion.span>
-          </h1>
-          <p className="text-lg md:text-xl font-body mb-6">
+    <section className="w-full bg-accent text-darkText px-6 pt-28 pb-20">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12">
+        {/* Left Side – Image + Typewriter */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center"
+        >
+          <div className="w-60 h-60 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg">
+            <Image
+              src="/hero.jpg"
+              alt="Maryam Yasaei"
+              width={320}
+              height={320}
+              className="object-cover w-full h-full"
+            />
+          </div>
+
+          <p className="text-lg md:text-xl font-body mt-6 text-center text-primary font-semibold">
             <Typewriter
               words={[
-                "Front-End Developer",
-                "CSS Enthusiast",
-                "UI Lover",
-                "React Queen 💅",
+                "Front-End Developer 👩‍💻",
+                "CSS Enthusiast 🎨",
+                "UI Lover 💖",
+                "React Queen 👑",
               ]}
               loop={true}
               cursor
@@ -39,27 +41,39 @@ export default function Hero() {
               delaySpeed={1500}
             />
           </p>
-          <a
-            href="#projects"
-            className="inline-block bg-primary text-white px-6 py-3 rounded-xl font-semibold hover:bg-indigo-700 transition"
-          >
-            View My Work
-          </a>
-        </div>
+        </motion.div>
 
-        {/* About Me Section */}
-        <div className="flex-1 bg-white text-darkText p-6 py-15 rounded-xl shadow-md">
-          <h2 className="text-2xl font-semibold mb-2 text-primary text-center font-heading">
-            A bit about me
-          </h2>
-          <p className="text-base leading-relaxed">
-            I’m a front-end developer with a passion for creating accessible,
-            scalable, and user-centered interfaces. I love working with modern
-            frameworks like React and Next.js and enjoy bringing designs to life
-            with clean, maintainable code. Let’s build something awesome
-            together.
+        {/* Right Side – Greeting and Text */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="text-center md:text-left max-w-xl"
+        >
+          <h1 className="text-5xl font-extrabold mb-4 font-heading flex items-center justify-center md:justify-start gap-3 text-primary">
+            Hi, I am Maryam{" "}
+            <motion.span
+              initial={{ rotate: 0 }}
+              animate={{ rotate: [0, 20, -10, 20, 0] }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatDelay: 3,
+              }}
+              className="inline-block origin-[70%_70%]"
+            >
+              👋
+            </motion.span>
+          </h1>
+          <p className="text-base leading-relaxed text-darkText/90 font-body">
+            I’m a front-end developer with a passion for building accessible,
+            fast, and visually appealing web applications. With a strong
+            foundation in React, TypeScript, and Tailwind CSS, I enjoy crafting
+            clean UI and meaningful experiences. Let’s build something great
+            together!
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   )

@@ -1,11 +1,8 @@
+"use client"
 import "../styles/globals.css"
 import Navbar from "@/components/Navbar"
+import { ParallaxProvider } from "react-scroll-parallax"
 
-export const metadata = {
-  title: "Maryam Yasaei – Front-End Developer",
-  description:
-    "Portfolio website showcasing React, Next.js, and UI development work.",
-}
 export default function RootLayout({
   children,
 }: {
@@ -15,7 +12,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-white text-darkText">
         <Navbar />
-        {children}
+        <ParallaxProvider>{children}</ParallaxProvider>
       </body>
     </html>
   )

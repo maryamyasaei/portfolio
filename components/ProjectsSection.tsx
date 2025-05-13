@@ -10,13 +10,6 @@ const projects = [
     link: "https://countdown-timer-app-tan.vercel.app/",
   },
   {
-    title: "ToDo App",
-    description:
-      "Simple TODO app with features like Adding New TODOs, Editing and Deleting TODOs,Marking TODOs as Completed and Tracking Completed TODOs.",
-    image: "./ToDo.png",
-    link: "https://todo-app-black-mu.vercel.app/",
-  },
-  {
     title: "Note App",
     description: "A Simple Notes App Created with React, TypeScript.",
     image: "./NoteApp.png",
@@ -40,11 +33,18 @@ const projects = [
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className=" bg-gray-50 py-10">
+    <section id="projects" className="scroll-mt-28 bg-gray-50 py-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12 text-primary font-heading">
+        <motion.h2
+          className="text-3xl font-bold text-center mb-12 text-primary font-heading"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           Projects Showcase
-        </h2>
+        </motion.h2>
+
         {projects.map((project, i) => (
           <motion.div
             key={i}
@@ -53,7 +53,8 @@ export default function ProjectsSection() {
             }`}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: i * 0.2 }}
+            whileHover={{ scale: 1.01 }}
+            transition={{ duration: 0.6, delay: i * 0.2, type: "spring", stiffness: 200 }}
             viewport={{ once: true }}
           >
             <motion.a
@@ -70,18 +71,13 @@ export default function ProjectsSection() {
                 className="w-full md:w-[320px] rounded-xl shadow-lg"
               />
             </motion.a>
-            <motion.div
-              className="text-left"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: i * 0.25, duration: 0.5 }}
-              viewport={{ once: true }}
-            >
+
+            <div className="text-left">
               <h3 className="text-xl font-bold text-primary mb-2">
                 {project.title}
               </h3>
               <p className="text-base text-darkText">{project.description}</p>
-            </motion.div>
+            </div>
           </motion.div>
         ))}
       </div>

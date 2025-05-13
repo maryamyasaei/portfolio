@@ -1,9 +1,9 @@
-'use client';
+"use client"
 
-import { useState } from 'react';
+import { useState } from "react"
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false)
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
@@ -14,13 +14,18 @@ export default function Navbar() {
         {/* Desktop Links */}
         <ul className="hidden md:flex space-x-6 text-gray-800">
           <li>
+            <a href="#skills" className="hover:text-blue-500">
+              Skills
+            </a>
+          </li>
+          <li>
             <a href="#projects" className="hover:text-blue-500">
               Projects
             </a>
           </li>
           <li>
-            <a href="#skills" className="hover:text-blue-500">
-              Skills
+            <a href="#volunteering" className="hover:text-blue-500">
+              Volunteering
             </a>
           </li>
           <li>
@@ -44,7 +49,11 @@ export default function Navbar() {
             stroke="currentColor"
             strokeWidth={2}
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
           </svg>
         </button>
       </div>
@@ -53,6 +62,15 @@ export default function Navbar() {
       {menuOpen && (
         <div className="md:hidden px-4 pb-4">
           <ul className="space-y-2 text-gray-800">
+            <li>
+              <a
+                href="#skills"
+                onClick={() => setMenuOpen(false)}
+                className="block hover:text-blue-500"
+              >
+                Skills
+              </a>
+            </li>
             <li>
               <a
                 href="#projects"
@@ -64,11 +82,11 @@ export default function Navbar() {
             </li>
             <li>
               <a
-                href="#skills"
+                href="#volunteering"
                 onClick={() => setMenuOpen(false)}
                 className="block hover:text-blue-500"
               >
-                Skills
+                Volunteering
               </a>
             </li>
             <li>
@@ -84,5 +102,5 @@ export default function Navbar() {
         </div>
       )}
     </nav>
-  );
+  )
 }
