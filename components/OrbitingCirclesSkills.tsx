@@ -16,7 +16,10 @@ import { OrbitingCircles } from "@/components/OrbitingCircles"
 
 export default function OrbitingCirclesSkills() {
   return (
-    <section id="skills" className="bg-white text-darkText py-24 px-6">
+    <section
+      id="skills"
+      className="bg-white text-darkText py-24 px-6 dark:bg-gray-900 dark:text-white"
+    >
       <div className="max-w-5xl mx-auto text-center flex flex-col items-center justify-center gap-12">
         <div className="relative flex h-[500px] w-full max-w-2xl flex-col items-center justify-center overflow-hidden rounded-xl    border border-gray-200 bg-gradient-to-b from-white to-gray-50 shadow-sm">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none">

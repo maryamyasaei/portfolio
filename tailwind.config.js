@@ -5,6 +5,13 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
     './styles/**/*.{css}',
   ],
+
+  darkMode: 'class', // or 'media' for system preference
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+
   theme: {
     extend:{
      colors:{

@@ -5,7 +5,7 @@ import { Typewriter } from "react-simple-typewriter"
 
 export default function HeroSection() {
   return (
-    <section className="w-full bg-accent text-darkText px-6 pt-28 pb-20">
+    <section className="w-full bg-accent text-darkText px-6 pt-28 pb-20 dark:bg-gray-900">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12">
         {/* Left Side – Image + Typewriter */}
         <motion.div
@@ -66,12 +66,11 @@ export default function HeroSection() {
               👋
             </motion.span>
           </h1>
-          <p className="text-base leading-relaxed text-darkText/90 font-body">
+          <p className="text-base leading-relaxed text-darkText/90 font-body dark:text-white ">
             I’m a front-end developer with a passion for building accessible,
             fast, and visually appealing web applications. With a strong
             foundation in React, TypeScript, and Tailwind CSS, I enjoy crafting
-            clean UI and meaningful experiences. Let’s build something great
-            together!
+            clean UI and meaningful experiences.{" "}
           </p>
         </motion.div>
       </div>

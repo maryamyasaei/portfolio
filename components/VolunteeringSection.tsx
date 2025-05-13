@@ -4,10 +4,13 @@ import { FaMicrophone, FaHandshake } from "react-icons/fa"
 
 export default function VolunteeringSection() {
   return (
-    <section id="volunteering" className="bg-white text-darkText py-20 px-6">
+    <section
+      id="volunteering"
+      className="bg-white text-darkText py-20 px-6 dark:bg-gray-900 dark:text-white"
+    >
       <div className="max-w-4xl mx-auto text-center flex flex-col gap-12">
         <h2 className="text-3xl font-bold font-heading text-primary">
-          Community & Talks
+          Community &amp; Talks
         </h2>
 
         <div className="flex flex-col gap-8 text-left">
@@ -15,12 +18,11 @@ export default function VolunteeringSection() {
           <div className="flex items-start gap-4">
             <FaMicrophone className="text-primary text-2xl mt-1" />
             <div>
-              <h3 className="text-lg font-semibold">
-                DDDByNight – "React 19 Features" (2024)
+              <h3 className="text-lg font-semibold ">
+                DDDByNight – &quot;React 19 Features&quot; (2024)
               </h3>
-              <p className="text-sm text-gray-600">
-                Shared insights on designing user-friendly AI interfaces with
-                confidence and uncertainty in mind.
+              <p className="text-sm text-gray-600 dark:text-white">
+                Shared insights on New Features of React 19 and how it makes life easier for Front end developers.
               </p>
             </div>
           </div>
@@ -30,11 +32,12 @@ export default function VolunteeringSection() {
             <FaHandshake className="text-primary text-2xl mt-1" />
             <div>
               <h3 className="text-lg font-semibold">
-                Volunteer – NDC Melbourne & DDD Melbourne & ADA{" "}
+                Volunteer – NDC Melbourne &amp; DDD Melbourne &amp; ADA
               </h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-600 dark:text-white">
                 Helped organize sessions, supported speakers, and assisted
-                attendees at Three of Australia's leading developer conferences.
+                attendees at three of Australia&apos;s leading developer
+                conferences.
               </p>
             </div>
           </div>

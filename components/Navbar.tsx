@@ -1,18 +1,22 @@
+// components/Navbar.tsx
 "use client"
 
 import { useState } from "react"
+import ThemeToggle from "@/components/ThemeToggle"
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        {/* Logo or Title */}
-        <h1 className="text-xl font-bold text-gray-800">MyPortfolio</h1>
+    <nav className="bg-white dark:bg-gray-900 px-6 py-4 shadow-md sticky top-0 z-50">
+      <div className="flex items-center justify-between max-w-7xl mx-auto">
+        {/* Left: Logo or Title */}
+        <div className="text-xl font-bold text-gray-800 dark:text-white">
+          MyPortfolio
+        </div>
 
         {/* Desktop Links */}
-        <ul className="hidden md:flex space-x-6 text-gray-800">
+        <ul className="hidden md:flex space-x-6 text-gray-700 dark:text-gray-200">
           <li>
             <a href="#skills" className="hover:text-blue-500">
               Skills
@@ -24,7 +28,7 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#volunteering" className="hover:text-blue-500">
+            <a href="#volunteering" className="hover:text-blue-500 ">
               Volunteering
             </a>
           </li>
@@ -35,11 +39,15 @@ export default function Navbar() {
           </li>
         </ul>
 
-        {/* Hamburger Menu Button */}
+        {/* Theme Toggle */}
+        <div className="hidden md:block ml-4">
+          <ThemeToggle />
+        </div>
+
+        {/* Hamburger Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-gray-800 focus:outline-none"
-          aria-label="Toggle menu"
+          className="md:hidden text-gray-800 dark:text-white focus:outline-none"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -60,43 +68,30 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden px-4 pb-4">
-          <ul className="space-y-2 text-gray-800">
+        <div className="md:hidden mt-4 text-gray-800 dark:text-white">
+          <ul className="flex flex-col items-center space-y-4">
             <li>
-              <a
-                href="#skills"
-                onClick={() => setMenuOpen(false)}
-                className="block hover:text-blue-500"
-              >
+              <a href="#skills" onClick={() => setMenuOpen(false)}>
                 Skills
               </a>
             </li>
             <li>
-              <a
-                href="#projects"
-                onClick={() => setMenuOpen(false)}
-                className="block hover:text-blue-500"
-              >
+              <a href="#projects" onClick={() => setMenuOpen(false)}>
                 Projects
               </a>
             </li>
             <li>
-              <a
-                href="#volunteering"
-                onClick={() => setMenuOpen(false)}
-                className="block hover:text-blue-500"
-              >
+              <a href="#volunteering" onClick={() => setMenuOpen(false)}>
                 Volunteering
               </a>
             </li>
             <li>
-              <a
-                href="#contact"
-                onClick={() => setMenuOpen(false)}
-                className="block hover:text-blue-500"
-              >
+              <a href="#contact" onClick={() => setMenuOpen(false)}>
                 Contact
               </a>
+            </li>
+            <li>
+              <ThemeToggle />
             </li>
           </ul>
         </div>

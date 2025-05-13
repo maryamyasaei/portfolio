@@ -47,14 +47,14 @@ export default function Home() {
 
       <motion.section
         id="contact"
-        className="scroll-mt-20 py-24 bg-gray-100"
+        className="scroll-mt-20 bg-gray-100"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <section className="bg-accent text-darkText px-10 ">
-          <div className="max-w-4xl mx-auto text-center font-heading text-3xl md:text-4xl font-extrabold leading-snug">
+        <section className="bg-accent text-darkText  py-20 dark:bg-gray-900">
+          <div className="max-w-4xl mx-auto text-center font-heading text-3xl md:text-4xl font-extrabold leading-snug dark:text-white">
             <p>
               “Great front-end is invisible. If it feels easy, fast, and
               beautiful — I’ve done my job.”

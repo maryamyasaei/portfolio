@@ -33,7 +33,10 @@ const projects = [
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="scroll-mt-28 bg-gray-50 py-20 px-6">
+    <section
+      id="projects"
+      className="scroll-mt-28 bg-gray-50 py-20 px-6 dark:bg-gray-900"
+    >
       <div className="max-w-6xl mx-auto">
         <motion.h2
           className="text-3xl font-bold text-center mb-12 text-primary font-heading"
@@ -54,7 +57,12 @@ export default function ProjectsSection() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             whileHover={{ scale: 1.01 }}
-            transition={{ duration: 0.6, delay: i * 0.2, type: "spring", stiffness: 200 }}
+            transition={{
+              duration: 0.6,
+              delay: i * 0.2,
+              type: "spring",
+              stiffness: 200,
+            }}
             viewport={{ once: true }}
           >
             <motion.a
@@ -76,7 +84,9 @@ export default function ProjectsSection() {
               <h3 className="text-xl font-bold text-primary mb-2">
                 {project.title}
               </h3>
-              <p className="text-base text-darkText">{project.description}</p>
+              <p className="text-base text-darkText dark:text-white">
+                {project.description}
+              </p>
             </div>
           </motion.div>
         ))}

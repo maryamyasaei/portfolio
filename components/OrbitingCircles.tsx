@@ -47,7 +47,11 @@ export function OrbitingCircles({
       )}
       {React.Children.map(children, (child, index) => {
         const angle = (360 / React.Children.count(children)) * index
-        const label = (child as any)?.props?.["aria-label"] || ""
+         let label = ""
+
+  if (React.isValidElement(child)) {
+    label = (child as React.ReactElement<{ "aria-label"?: string }>).props["aria-label"] || ""
+  }
 
         return (
           <div
