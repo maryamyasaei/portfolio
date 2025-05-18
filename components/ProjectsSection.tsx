@@ -29,6 +29,13 @@ const projects = [
     image: "./DataDiscovery.png",
     link: "https://portal.tern.org.au/browse/theme",
   },
+  {
+    title: "Wheel Of Names",
+    description:
+      "This will be an app that I presume is inspired by the TV show Wheel of Fortune. In the TV show, contestants try to figure out a short phrase by guessing letters.",
+    image: "./WheelOfNames.png",
+    link: "https://wheel-of-names-app.vercel.app/",
+  },
 ]
 
 export default function ProjectsSection() {
