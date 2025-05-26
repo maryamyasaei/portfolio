@@ -36,6 +36,13 @@ const projects = [
     image: "./WheelOfNames.png",
     link: "https://wheel-of-names-app.vercel.app/",
   },
+  {
+    title: "Weather App",
+    description:
+      "Weather App with current day and 7 Days Forecast Sections.Also, Searching and current location Logic.",
+    image: "./WeatherApp.png",
+    link: "https://weather-app-psi-eight-32.vercel.app/",
+  },
 ]
 
 export default function ProjectsSection() {
