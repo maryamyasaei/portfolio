@@ -19,12 +19,26 @@ export default function VolunteeringSection() {
             <FaMicrophone className="text-primary text-2xl mt-1" />
             <div>
               <h3 className="text-lg font-semibold ">
-                DDDByNight – &quot;React 19 Features&quot; (2024)
+                DDDByNight – React 19 Features (2024)
               </h3>
               <p className="text-sm text-gray-600 dark:text-white">
-                Shared insights on New Features of React 19 and how it makes life easier for Front end developers.
+                Shared insights on New Features of React 19 and how it makes
+                life easier for Front end developers.
               </p>
             </div>
+
+          </div>
+           <div className="flex items-start gap-4">
+            <FaMicrophone className="text-primary text-2xl mt-1" />
+            <div>
+              <h3 className="text-lg font-semibold ">
+                The UX of AI: Designing Interfaces Around Uncertainty and Confidence. (2025)
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-white">
+                Shared how design and engineering can come together to create more thoughtful AI experiences.
+              </p>
+            </div>
+
           </div>
 
           {/* Volunteering */}
