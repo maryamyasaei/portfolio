@@ -5,7 +5,17 @@ import { Typewriter } from "react-simple-typewriter"
 
 export default function HeroSection() {
   return (
-    <section className="w-full bg-accent text-darkText px-6 pt-28 pb-20 dark:bg-gray-900">
+    <section className="w-full bg-accent text-darkText px-6 pt-10 pb-20 dark:bg-gray-900">
+      <div className=" left-4 z-30">
+        <Image
+          src="/badge.png"
+          alt="AWS AI Practitioner Badge"
+          width={93}
+          height={93}
+          className="rounded-lg shadow-md border border-white/50 dark:border-white/20 hover:scale-105 transition-transform duration-300"
+          priority
+        />
+      </div>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12">
         {/* Left Side – Image + Typewriter */}
         <motion.div
@@ -43,7 +53,7 @@ export default function HeroSection() {
             />
           </p>
         </motion.div>
-        
+
         {/* Right Side – Greeting and Text */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}

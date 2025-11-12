@@ -26,19 +26,19 @@ export default function VolunteeringSection() {
                 life easier for Front end developers.
               </p>
             </div>
-
           </div>
-           <div className="flex items-start gap-4">
+          <div className="flex items-start gap-4">
             <FaMicrophone className="text-primary text-2xl mt-1" />
             <div>
               <h3 className="text-lg font-semibold ">
-                The UX of AI: Designing Interfaces Around Uncertainty and Confidence. (2025)
+                The UX of AI: Designing Interfaces Around Uncertainty and
+                Confidence. (2025)
               </h3>
               <p className="text-sm text-gray-600 dark:text-white">
-                Shared how design and engineering can come together to create more thoughtful AI experiences.
+                Shared how design and engineering can come together to create
+                more thoughtful AI experiences.
               </p>
             </div>
-
           </div>
 
           {/* Volunteering */}
@@ -46,7 +46,7 @@ export default function VolunteeringSection() {
             <FaHandshake className="text-primary text-2xl mt-1" />
             <div>
               <h3 className="text-lg font-semibold">
-                Volunteer – NDC Melbourne &amp; DDD Melbourne &amp; ADA
+                Volunteer – DDD Melbourne &amp; ADA
               </h3>
               <p className="text-sm text-gray-600 dark:text-white">
                 Helped organize sessions, supported speakers, and assisted
