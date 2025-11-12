@@ -29,9 +29,10 @@ export default function HeroSection() {
             <Typewriter
               words={[
                 "Front-End Developer 👩‍💻",
-                "CSS Enthusiast 🎨",
-                "UI Lover 💖",
                 "React Queen 👑",
+                "UI Lover 💖",
+                "Cloud Architecture Enthusiast ☁️",
+                "AWS AI Practitioner 🤖",
               ]}
               loop={true}
               cursor
@@ -42,7 +43,7 @@ export default function HeroSection() {
             />
           </p>
         </motion.div>
-
+        
         {/* Right Side – Greeting and Text */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -67,10 +68,11 @@ export default function HeroSection() {
             </motion.span>
           </h1>
           <p className="text-base leading-relaxed text-darkText/90 font-body dark:text-white ">
-            I’m a front-end developer with a passion for building accessible,
-            fast, and visually appealing web applications. With a strong
-            foundation in React, TypeScript, and Tailwind CSS, I enjoy crafting
-            clean UI and meaningful experiences.{" "}
+            I’m a React-loving Frontend Developer with over 5 years of
+            experience turning ideas into meaningful digital experiences.
+            Recently, I’ve been diving into AI and Cloud Architecture with AWS,
+            combining creativity and technology to build smarter, scalable
+            applications.{" "}
           </p>
         </motion.div>
       </div>

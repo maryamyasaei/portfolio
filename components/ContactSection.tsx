@@ -133,7 +133,7 @@ export default function ContactSection() {
             Maryam Yasaei
           </h3>
           <p className="text-sm text-gray-700 mb-6 dark:text-white">
-            Front-End Developer
+            Software Development | AI Engineering | Cloud Architecture
           </p>
 
           <div className="text-gray-800 mb-8 dark:text-white">
