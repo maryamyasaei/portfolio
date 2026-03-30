@@ -1,5 +1,5 @@
 "use client"
-import { FaLinkedin, FaGithub } from "react-icons/fa"
+import { FaLinkedin, FaGithub, FaMedium } from "react-icons/fa"
 import { useState } from "react"
 
 export default function ContactSection() {
@@ -162,6 +162,13 @@ export default function ContactSection() {
               rel="noopener noreferrer"
             >
               <FaGithub />
+            </a>
+            <a
+              href="https://medium.com/@myasaie.65"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaMedium />
             </a>
           </div>
           <p className="text-md italic text-gray-600 leading-relaxed border-l-4 pl-4 border-primary dark:text-white">
