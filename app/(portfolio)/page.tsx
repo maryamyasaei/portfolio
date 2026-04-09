@@ -56,8 +56,8 @@ export default function Home() {
         <section className="bg-accent text-darkText  py-20 dark:bg-gray-900">
           <div className="max-w-4xl mx-auto text-center font-heading text-3xl md:text-4xl font-extrabold leading-snug dark:text-white">
             <p>
-              “Designing intuitive front-ends with the power of AI and the
-              scalability of the cloud.”
+              &quot;Designing intuitive front-ends with the power of AI and the
+              scalability of the cloud.&quot;
             </p>
           </div>
           <ContactSection />
